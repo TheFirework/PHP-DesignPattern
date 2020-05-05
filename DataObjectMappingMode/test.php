@@ -1,7 +1,7 @@
 <?php
 header("Content-type:text/html; charset=utf-8");
 
-require '../AdapterModel/adapter.php';
+require '../AdapterMode/adapter.php';
 require '../RegisterMode/register.php';
 
 class User
@@ -12,11 +12,11 @@ class User
 
     protected $db;
 
-    function __construct()
+    function __construct($id)
     {
         $this->db = new MyMysqli();
         $this->db->connect('127.0.0.1', 'root', '', 'shop');
-        $res = $this->db->query('select * from user limit 1');
+        $res = $this->db->query("select * from user where  id='{$id}' limit 1");
         $data = $res->fetch_assoc();
         $this->id = $data['id'];
         $this->nickname = $data['nickname'];
