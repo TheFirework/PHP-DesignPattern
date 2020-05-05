@@ -11,14 +11,6 @@ interface DbInterface
     function close();
 }
 
-class Database
-{
-    protected $db;
-    private function __construct()
-    {
-
-    }
-}
 
 
 class Mysql implements DbInterface
@@ -85,9 +77,9 @@ class MyPdo implements DbInterface
     }
 }
 
-$db = new MyMysqli();
-$db->connect('127.0.0.1','root','','shop');
-$data = $db->query('show databases');
-$db->close();
-
-print_r($data);
+//$db = new MyMysqli();
+//$db->connect('127.0.0.1','root','','shop');
+//$data = $db->query('show databases');
+//$db->close();
+//
+//print_r($data);

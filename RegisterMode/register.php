@@ -79,9 +79,9 @@ class Register
     }
 }
 
-$db1 = Factory::create();
-
-$db2 = Register::get('db');
-
-print_r($db1);
-print_r($db2);
+//$db1 = Factory::create();
+//
+//$db2 = Register::get('db');
+//
+//print_r($db1);
+//print_r($db2);
